@@ -1,0 +1,17 @@
+<project basedir="." default="TOTAL" name="MYANTBUILD">
+	<target name="TOTAL" depends="DEPENDENCY">
+		
+		<echo>Dies ist eine Textausgabe!</echo>
+		<echo message = "Dies ist eine weitere Art einen Text auszugeben!"/>
+		
+		<jar destfile="${dist}/lib/beispiel.jar" basedir="."/>
+		
+		<zip destfile="${files}/allzipped.zip"
+		     basedir="."/>
+		
+	</target>
+	
+	<target name="DEPENDENCY">
+		<echo message = "Dies ist eine Dependency!"/>
+	</target>
+</project>

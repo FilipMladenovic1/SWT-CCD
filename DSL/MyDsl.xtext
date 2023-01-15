@@ -1,0 +1,22 @@
+grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+
+Model:
+	action+=Action*;
+	
+Action:
+	addToBouquet | removeFromBouquet;
+	
+	
+addToBouquet:
+	'add' flowers
+;
+
+removeFromBouquet:
+	'remove' flowers
+;
+
+flowers:
+	STRING "(color:" STRING ")" "(amount:" INT ")"
+;
